@@ -14,7 +14,7 @@ export const ThemeProvider = (props) => {
      * this theme config is linked to the value of the state
      */
     const themeConfig = useMemo(() => {
-        console.log("in the memoization", state)
+        console.log("in the memoization", state.theme)
         return state.theme
     }, [state]);
 

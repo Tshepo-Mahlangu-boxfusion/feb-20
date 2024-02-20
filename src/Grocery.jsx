@@ -4,7 +4,7 @@ import {ThemeSelector} from './components/ThemeSelector';
 const Grocery = () => {
     const { theme } = useThemeState();
     return (
-        <div style={{backgroundColor: theme}}>
+        <div style={{backgroundColor: theme, height: "100vh"}}>
             <ThemeSelector />
         </div>
     );
