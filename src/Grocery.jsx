@@ -1,10 +1,10 @@
 import React from 'react';
-import { useThemeState } from '../../providers/themeProvider';
-import ThemeSelector from './components/themeSelector/ThemeSelector';
+import { useThemeState } from './providers/provider.jsx'
+import {ThemeSelector} from './components/ThemeSelector';
 const Grocery = () => {
     const { theme } = useThemeState();
     return (
-        <div style={{background: theme}}>
+        <div style={{backgroundColor: theme}}>
             <ThemeSelector />
         </div>
     );

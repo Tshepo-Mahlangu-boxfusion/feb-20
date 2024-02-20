@@ -3,19 +3,19 @@ import { ThemeActionContext, ThemeStateContext } from "./contexts";
 import { themeReducer } from "./reducers"; 
 import { setThemeAction } from "./actions";
 
-const ThemeProvider = (props) => {
+export const ThemeProvider = (props) => {
     // Make state using the reducer, initializing to theme: "red"
-    const [state, dispatch] = useReducer(themeReducer, { theme: "green" });
+    const [state, dispatch] = useReducer(themeReducer, {theme: 'gray'});
 
     // this theme config is linked to the value of the state
     const themeConfig = useMemo(() => {
-        return {
-            theme: state.theme
-        }
+        console.log("in the memoization", state)
+        return state.theme
     }, [state]);
 
     const changeTheme = (theme) => {
-        dispatch(setThemeAction(theme));
+        console.log({theme});
+        dispatch(setThemeAction({theme}));
     }
 
     return (
@@ -26,8 +26,6 @@ const ThemeProvider = (props) => {
         </ThemeStateContext.Provider>
     );
 }
-
-export default ThemeProvider;
 
 // custom hooks to get context objects
 export const useThemeState = () => {

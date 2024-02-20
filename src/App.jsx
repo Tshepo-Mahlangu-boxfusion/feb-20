@@ -1,6 +1,6 @@
 import './App.css';
 import Grocery from './Grocery';
-import ThemeProvider from './providers/themeProvider';
+import {ThemeProvider} from './providers/provider.jsx';
 
 function App() {
   return (
