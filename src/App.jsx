@@ -1,7 +1,7 @@
 import './App.css';
-import Grocery from './Grocery';
+import Grocery from './components/Grocery.jsx';
 import { AuthProvider } from './providers/authProvider/AuthProvider.jsx';
-import {ThemeProvider} from './providers/provider.jsx';
+import {ThemeProvider} from './providers/themeProvider/themeProvider.jsx';
 
 function App() {
   return (

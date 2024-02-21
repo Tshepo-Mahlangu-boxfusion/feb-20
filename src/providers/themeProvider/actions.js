@@ -7,5 +7,8 @@ export const ThemeActionEnums = {
 /**
  * Create the action payload value
  */
-export const setThemeAction 
-    = createAction(ThemeActionEnums.setTheme, (theme) => ({theme}));
+export const setThemeAction = createAction(
+        ThemeActionEnums.setTheme, 
+        ({theme}) => ({theme}), 
+        { theme: "#fff" }
+);

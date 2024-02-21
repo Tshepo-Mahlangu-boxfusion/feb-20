@@ -1,5 +1,5 @@
 import React from 'react';
-import { useThemeAction } from '../providers/provider';
+import { useThemeAction } from '../providers/themeProvider/themeProvider';
 
 export const ThemeSelector = () => {
     const { changeTheme } = useThemeAction();

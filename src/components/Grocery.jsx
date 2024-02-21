@@ -1,9 +1,10 @@
 import React, { useContext, useReducer, useState } from 'react';
-import { useThemeState } from './providers/provider.jsx'
-import { ThemeSelector } from './components/ThemeSelector';
-import { loginAction } from './providers/authProvider/actions.js';
-import { loginReducer } from './providers/authProvider/reducers.js';
-import { AuthContext } from './providers/authProvider/contexts.js';
+import { useThemeState } from '../providers/themeProvider/themeProvider.jsx'
+import { ThemeSelector } from './ThemeSelector.jsx';
+import { loginAction } from '../providers/authProvider/actions.js';
+import { loginReducer } from '../providers/authProvider/reducers.js';
+import { AuthContext } from '../providers/authProvider/contexts.js';
+import Home from './Home.jsx';
 const Grocery = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -26,10 +27,7 @@ const Grocery = () => {
         <div style={{backgroundColor: theme, height: "100vh"}}>
             <ThemeSelector />
             {user?.username === "teboho" ? 
-                <div>
-                    <h1>Welcome</h1>
-                    <button type='button' onClick={() => logout()}>Logout</button>
-                </div>
+                <Home username={user.username}/>
             : 
                 <form action="#" onSubmit={makeLogin}>
                     <input type="text" name="username" placeholder='username' value={username} onChange={(e) => setUsername((prev => e.target.value))} />

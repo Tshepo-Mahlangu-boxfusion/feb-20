@@ -6,7 +6,7 @@ export const AuthActionEnums = {
 
 export const loginAction = createAction(
     AuthActionEnums.login,
-    ({username, password}) => { /** the payload creator takes in one variable */
+    ({username, password}) => { /** the payload creator takes in one param */
         return {
             username,
             password

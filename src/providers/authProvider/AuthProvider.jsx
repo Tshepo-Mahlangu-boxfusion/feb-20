@@ -23,7 +23,7 @@ export const AuthProvider = (props) => {
 
     function logout() {
         console.log("Logging Out");
-        dispatch(loginAction);
+        dispatch(loginAction({username: "", password: ""}));
         console.log(user);
     }
 
