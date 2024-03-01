@@ -20,14 +20,14 @@ const Grocery = () => {
                 username,
                 password
             });
-        }
+        } 
     }
 
     return (
         <div style={{backgroundColor: theme, height: "100vh"}}>
             <ThemeSelector />
-            {user?.username === "teboho" ? 
-                <Home username={user.username}/>
+            {   user.id !== 0 ? 
+                <Home name={user.name} surname={user.surname} />
             : 
                 <form action="#" onSubmit={makeLogin}>
                     <input type="text" name="username" placeholder='username' value={username} onChange={(e) => setUsername((prev => e.target.value))} />

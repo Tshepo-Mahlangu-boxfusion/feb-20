@@ -1,6 +1,6 @@
 import './App.css';
 import Grocery from './components/Grocery.jsx';
-import { AuthProvider } from './providers/authProvider/AuthProvider.jsx';
+import { AuthProvider } from './providers/authProvider/index.jsx';
 import {ThemeProvider} from './providers/themeProvider/themeProvider.jsx';
 
 function App() {

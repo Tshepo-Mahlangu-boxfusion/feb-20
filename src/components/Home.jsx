@@ -7,7 +7,7 @@ export default function Home(props) {
     return (
         <div>
             <h1>Welcome</h1>
-            <p>Logged in as {props.username}</p>
+            <p>Logged in as {props.name} {props.surname}</p>
             <button type='button' onClick={() => logout()}>Logout</button>
         </div>
     );
